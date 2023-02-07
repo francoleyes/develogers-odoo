@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!--        Administrador-->
+        <record id="develogers_reto_administrador" model="res.groups">
+            <field name="name">Administrador</field>
+            <field name="category_id" ref="develogers_reto_application"/>
+        </record>
+        
+    </data>     
+</odoo>

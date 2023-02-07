@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Tree View -->
+    <record id="view_school_teacher_tree" model="ir.ui.view">
+        <field name="name">school.teacher.tree</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <tree string="Maestro">
+                <field name="name"/>
+                <field name="subject_ids"/>
+            </tree>
+        </field>
+   </record>
+
+    <!-- Form View -->
+    <record id="view_school_teacher_form" model="ir.ui.view">
+        <field name="name">school.teacher.form</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <form string="Maestro">
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Nombre de maestro"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="profile"/>
+                            <field name="average_student_grade"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="page_subject" string="Asignaturas">
+                            <field name="subject_ids" widget="section_and_note_one2many"
+                                   mode="tree" readonly="1">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="credits"/>
+                                    <field name="max_students"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_school_teacher_search" model="ir.ui.view">
+        <field name="name">school.teacher.search</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <search string="Maestro">
+                <field name="name" string="Nombre de maestro" filter_domain="[('name','ilike',self)]"/>
+            </search>
+        </field>
+    </record>
+
+</odoo>

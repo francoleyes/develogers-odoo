@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+school_student_administrador,access school.student,model_school_student,develogers_reto_administrador,1,1,1,1
+school_subject_administrador,access school.subject,model_school_subject,develogers_reto_administrador,1,1,1,1
+school_teacher_administrador,access school.teacher,model_school_teacher,develogers_reto_administrador,1,1,1,1

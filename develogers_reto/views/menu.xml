@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- Subject -->
+    <record id="action_school_subject" model="ir.actions.act_window">
+        <field name="name">Asignatura</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">school.subject</field>
+        <field name="view_mode">tree,form,activity</field>
+        <field name="view_id" ref="view_school_subject_tree"/>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="search_view_id" ref="view_school_subject_search"/>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Crea una asignatura
+          </p><p>
+            ...
+          </p>
+        </field>
+    </record>
+
+    <!-- Student -->
+    <record id="action_school_student" model="ir.actions.act_window">
+        <field name="name">Estudiante</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">school.student</field>
+        <field name="view_mode">tree,form,activity</field>
+        <field name="view_id" ref="view_school_student_tree"/>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="search_view_id" ref="view_school_student_search"/>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Crea un estudiante
+          </p><p>
+            ...
+          </p>
+        </field>
+    </record>
+
+    <!-- Teacher -->
+    <record id="action_school_teacher" model="ir.actions.act_window">
+        <field name="name">Maestros</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">school.teacher</field>
+        <field name="view_mode">tree,form,activity</field>
+        <field name="view_id" ref="view_school_teacher_tree"/>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="search_view_id" ref="view_school_teacher_search"/>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Crea un maestro
+          </p><p>
+            ...
+          </p>
+        </field>
+    </record>
+
+
+    <!-- Main menu -->
+    <menuitem id="menu_school" name="Escuela" sequence="0" web_icon="develogers_reto,static/description/icon.png"/>
+
+        <!-- Submenu -->
+        <menuitem id="submenu_school_teacher" name="Maestros" parent="menu_school" sequence="1" action="action_school_teacher"/>
+        <menuitem id="submenu_school_subject" name="Asignaturas" parent="menu_school" sequence="2" action="action_school_subject"/>
+        <menuitem id="submenu_school_student" name="Estudiantes" parent="menu_school" sequence="3" action="action_school_student"/>
+
+</odoo>
+
+
+
+
