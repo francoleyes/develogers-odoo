@@ -1,6 +1,9 @@
 # Módulo School en Odoo
 Este módulo de Odoo permite la gestión de estudiantes y maestros en un sistema escolar. Para poder utilizar este módulo de manera óptima, es necesario que el usuario que lo instala pertenezca al grupo de administrador de la categoría 'Develogers - Reto' en Odoo. De esta manera, tendrá los permisos necesarios para realizar las operaciones read-write-create-delete en el sistema.
 
+![Agregar a grupo de administrador](https://i.imgur.com/elzOs0A.jpg)
+
+
 ## Documentación
 
 class SchoolStudent
